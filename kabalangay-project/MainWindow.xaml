@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kabalangay_project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="256,230,0,0" TextWrapping="Wrap" Text="helloworld!" VerticalAlignment="Top" Width="120"/>
+        Title="Kabalangay" Height="650" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <DockPanel>
+        <!-- Navigation Bar -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Home"/>
+            <MenuItem Header="_About"/>
+        </Menu>
 
-    </Grid>
+        <!-- Content Area -->
+        <ContentControl x:Name="MainContent" />
+    </DockPanel>
 </Window>
