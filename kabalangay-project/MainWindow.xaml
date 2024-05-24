@@ -8,14 +8,17 @@
         Title="Kabalangay" Height="650" Width="1200"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
-    <DockPanel>
-        <!-- Navigation Bar -->
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_Home"/>
-            <MenuItem Header="_About"/>
-        </Menu>
-
-        <!-- Content Area -->
-        <ContentControl x:Name="MainContent" />
-    </DockPanel>
+    <!-- Nav-bar -->
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="#C4B095" />
+        <StackPanel Grid.Column="0">
+            <Button Height="40" Width="200" Margin="10">Home</Button>
+            <Button Height="40" Width="200" Margin="5">About</Button>
+        </StackPanel>
+    </Grid>
+    <!-- Nav-bar end-->
 </Window>
