@@ -20,17 +20,25 @@ namespace kabalangay_project
         public MainWindow()
         {
             InitializeComponent();
+            LoadHomeView();
         }
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            // Load the HomeView into the ContentControl
-            MainContentControl.Content = new HomeView();
+            LoadHomeView();
         }
 
         private void AboutButton_Click(object sender, RoutedEventArgs e)
         {
-            // Load the HomeView into the ContentControl
+            LoadAboutView();
+        }
+
+        private void LoadHomeView()
+        {
+            MainContentControl.Content = new HomeView();
+        }
+        private void LoadAboutView()
+        {
             MainContentControl.Content = new AboutView();
         }
     }
