@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kabalangay_project"
+        xmlns:views="clr-namespace:kabalangay_project.Views"
         mc:Ignorable="d"
         Title="Kabalangay" Height="650" Width="1200"
         WindowStartupLocation="CenterScreen"
@@ -11,14 +12,15 @@
     <!-- Nav-bar -->
         <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Background="#C4B095" />
         <StackPanel Grid.Column="0">
-            <Button Height="40" Width="200" Margin="10">Home</Button>
-            <Button Height="40" Width="200" Margin="5">About</Button>
+            <Button Height="40" Width="200" Margin="10" Click="HomeButton_Click">Home</Button>
+            <Button Height="40" Width="200" Margin="5" Click="AboutButton_Click">About</Button>
         </StackPanel>
+        <ContentControl x:Name="MainContentControl" Grid.Column="1"/>
     </Grid>
     <!-- Nav-bar end-->
 </Window>
