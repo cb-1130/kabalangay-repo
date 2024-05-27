@@ -4,8 +4,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="Welcome to the About View" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+             d:DesignHeight="450" d:DesignWidth="950">
+    <Grid Background="#FFFFFF" Width="950">
+        <Border Background="#F1E8E3" Width="950" Height="75" VerticalAlignment="Top" CornerRadius="0,0,10,0">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="4" Direction="270"/>
+            </Border.Effect>
+            <TextBlock FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Width="122" Margin="10,0,0,0"><Run FontWeight="Bold" Text="ABOUT"/></TextBlock>
+        </Border>
+        <StackPanel>
+            <TextBlock FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Margin="10,83,0,0"><Run FontWeight="Bold" Text="HELLO &lt;name&gt;"/></TextBlock>
+            <TextBlock Text="Let's start connecting today!" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Margin="10,0,0,0"/>
+        </StackPanel>
     </Grid>
 </UserControl>
