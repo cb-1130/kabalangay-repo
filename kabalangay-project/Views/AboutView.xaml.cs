@@ -10,12 +10,17 @@ namespace kabalangay_project.Views
         public AboutView()
         {
             InitializeComponent();
+
+            // Call the method to display information about officials when the AboutView is initialized
+            DisplayInformationAboutOfficials();
         }
+
+
 
         private void OfficialsButton_Click(object sender, RoutedEventArgs e)
         {
             // Update the display text when Officials button is clicked
-            DisplayText.Text = "Information about officials";
+            DisplayInformationAboutOfficials();
         }
 
         private void PersonnelButton_Click(object sender, RoutedEventArgs e)
@@ -30,5 +35,10 @@ namespace kabalangay_project.Views
             DisplayText.Text = "Information about zones";
         }
 
+        private void DisplayInformationAboutOfficials()
+        {
+            // Update the display text to show information about officials
+            DisplayText.Text = "Information about officials";
+        }
     }
 }

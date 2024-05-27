@@ -30,6 +30,7 @@
                     <Setter Property="Background" Value="#094056"/>
                 </Trigger>
             </Style.Triggers>
+            
         </Style>
     </UserControl.Resources>
     <Grid Background="#FFFFFF" Width="950">
@@ -51,20 +52,21 @@
                 <Border Background="#C0CDDE" Width="170" Height="140" Margin="5" CornerRadius="10"/>
             </StackPanel>
 
-            <!-- OFFICIALS -->
-            <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
-                <Button Content="Officials" Width="315" Height="30" Click="OfficialsButton_Click"/>
-                <Button Content="Personnel" Width="315" Height="30" Click="PersonnelButton_Click"/>
-                <Button Content="Zone" Width="315" Height="30" Click="ZoneButton_Click"/>
+            <StackPanel Margin="0,10,0,0">
+                <!-- OFFICIALS -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Center">
+                    <Button Content="Officials" Width="315" Height="30" Click="OfficialsButton_Click"/>
+                    <Button Content="Personnel" Width="315" Height="30" Click="PersonnelButton_Click"/>
+                    <Button Content="Zone" Width="315" Height="30" Click="ZoneButton_Click"/>
+                </StackPanel>
+
+                <!-- Display Area -->
+                <Border BorderBrush="Black" BorderThickness="1" Margin="0, 10, 0, 0">
+                    <TextBlock x:Name="DisplayText" Text="Click a button to display information" FontSize="16" TextWrapping="Wrap" Margin="10"/>
+                </Border>
+
             </StackPanel>
-
-            <!-- Display Area -->
-            <Border BorderBrush="Black" BorderThickness="1" Margin="0, 10, 0, 0">
-                <TextBlock x:Name="DisplayText" Text="Click a button to display information" FontSize="16" TextWrapping="Wrap" Margin="10"/>
-            </Border>
-
-
-
+            
         </StackPanel>
     </Grid>
 </UserControl>
