@@ -9,4 +9,19 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\abstract-decorative-aesthetic-mint-green-background-free-vector.jpg" />
+    <None Remove="Images\dice-1502706_640.jpg" />
+    <None Remove="Images\gambling-4331254_640.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\abstract-decorative-aesthetic-mint-green-background-free-vector.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\dice-1502706_640.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

@@ -1,28 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace kabalangay_project.Views
 {
-    /// <summary>
-    /// Interaction logic for AboutView.xaml
-    /// </summary>
     public partial class AboutView : UserControl
     {
         public AboutView()
         {
             InitializeComponent();
         }
+
+        private void OfficialsButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Update the display text when Officials button is clicked
+            DisplayText.Text = "Information about officials";
+        }
+
+        private void PersonnelButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Update the display text when Personnel button is clicked
+            DisplayText.Text = "Information about personnel";
+        }
+
+        private void ZoneButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Update the display text when Zone button is clicked
+            DisplayText.Text = "Information about zones";
+        }
+
     }
 }

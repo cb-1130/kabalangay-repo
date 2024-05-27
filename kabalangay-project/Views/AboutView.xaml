@@ -5,16 +5,66 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="950">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="#A0A0A0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="30"/>
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="Background" Value="#094056"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#094056"/>
+                </Trigger>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="Background" Value="#094056"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid Background="#FFFFFF" Width="950">
-        <Border Background="#F1E8E3" Width="950" Height="75" VerticalAlignment="Top" CornerRadius="0,0,10,0">
-            <Border.Effect>
-                <DropShadowEffect ShadowDepth="1" BlurRadius="4" Direction="270"/>
-            </Border.Effect>
-            <TextBlock FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Width="122" Margin="10,0,0,0"><Run FontWeight="Bold" Text="ABOUT"/></TextBlock>
-        </Border>
-        <StackPanel>
-            <TextBlock FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Margin="10,83,0,0"><Run FontWeight="Bold" Text="HELLO &lt;name&gt;"/></TextBlock>
-            <TextBlock Text="Let's start connecting today!" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Margin="10,0,0,0"/>
+        <StackPanel Width="950">
+            <!-- MISSION/VISION -->
+            <StackPanel Width="950" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Border Background="#F1E8E3" Width="950" Height="75" VerticalAlignment="Top" CornerRadius="0,0,10,0" HorizontalAlignment="Left">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="1" BlurRadius="4" Direction="270"/>
+                    </Border.Effect>
+                    <TextBlock FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Width="122" Margin="10,0,0,0"><Run FontWeight="Bold" Text="ABOUT"/></TextBlock>
+                </Border>
+            </StackPanel>
+            <StackPanel Height="150" Orientation="Horizontal" Width="950" Margin="0,20,0,0">
+                <Border Background="#C0CDDE" Width="170" Height="140" Margin="5" CornerRadius="10">
+                    <TextBlock FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Margin="10,108,0,0" FontFamily="Segoe UI Semibold"><Run FontWeight="Bold" Text="Mission"/></TextBlock>
+                </Border>
+                <Border Background="#C0CDDE" Width="170" Height="140" Margin="5" CornerRadius="10"/>
+                <Border Background="#C0CDDE" Width="170" Height="140" Margin="5" CornerRadius="10"/>
+            </StackPanel>
+
+            <!-- OFFICIALS -->
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
+                <Button Content="Officials" Width="315" Height="30" Click="OfficialsButton_Click"/>
+                <Button Content="Personnel" Width="315" Height="30" Click="PersonnelButton_Click"/>
+                <Button Content="Zone" Width="315" Height="30" Click="ZoneButton_Click"/>
+            </StackPanel>
+
+            <!-- Display Area -->
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0, 10, 0, 0">
+                <TextBlock x:Name="DisplayText" Text="Click a button to display information" FontSize="16" TextWrapping="Wrap" Margin="10"/>
+            </Border>
+
+
+
         </StackPanel>
     </Grid>
 </UserControl>
