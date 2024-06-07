@@ -1,3 +1,9 @@
+To install MongoDB
+- Use NuGet Package Manager to install the MongoDB.Driver package.
+- You can do this via the NuGet Package Manager GUI in Visual Studio or by running the following command in the Package Manager Console
+- Install-Package MongoDB.Driver  
+
+
 Cloning the Repository
 1. Open Visual Studio 2022.
 2. Navigate to "File" > "Clone Repository".
