@@ -7,6 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#FFFFFF">
-        <TextBlock Text="Welcome to the Register View" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Width="950" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Border Background="#F1E8E3" Width="950" Height="75" VerticalAlignment="Top" CornerRadius="0,0,10,0" HorizontalAlignment="Left">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="1" BlurRadius="4" Direction="270"/>
+                </Border.Effect>
+                <TextBlock FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Width="158" Margin="10,0,0,0"><Run FontWeight="Bold" Text="REGISTER"/></TextBlock>
+            </Border>
+        </StackPanel>
     </Grid>
 </UserControl>
