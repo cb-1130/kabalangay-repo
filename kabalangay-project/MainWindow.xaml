@@ -20,6 +20,7 @@
             <Button Height="40" Width="200" Margin="10" Click="HomeButton_Click">Home</Button>
             <Button Height="40" Width="200" Margin="5" Click="AboutButton_Click">About</Button>
             <Button Height="40" Width="200" Margin="5" Click="AboutButton_Click">Services</Button>
+            <Button Height="40" Width="200" Margin="5" Click="RegisterButton_Click">Register</Button>
         </StackPanel>
         <ContentControl x:Name="MainContentControl" Grid.Column="1"/>
     </Grid>

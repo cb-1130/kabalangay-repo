@@ -33,6 +33,11 @@ namespace kabalangay_project
             LoadAboutView();
         }
 
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoadRegisterView();
+        }
+
         private void LoadHomeView()
         {
             MainContentControl.Content = new HomeView();
@@ -40,6 +45,10 @@ namespace kabalangay_project
         private void LoadAboutView()
         {
             MainContentControl.Content = new AboutView();
+        }
+        private void LoadRegisterView()
+        {
+            MainContentControl.Content = new RegisterView();
         }
     }
 }
